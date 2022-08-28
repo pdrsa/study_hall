@@ -1,15 +1,21 @@
 # Study Hall: Plataforma para Criação de Grupos de Estudo
 
-## :raising_hand_man: Membros e papéis (fullstack, backend ou frontend dev) :raising_hand_man:
-Heitor de Paula Santos Damasceno (frontend dev)
+## :raising_hand_man: Membros e Papéis :raising_hand_man:
 
-Antonio Isaac Lima (fullstack dev)
+  * Heitor de Paula Santos Damasceno (Front-end Developer)
 
-João Pedrosa (backend dev)
+  * Antonio Isaac Lima (Full-stack Developer)
+
+  * João Pedrosa (Back-end Developer)
+
 ## :bulb: Funcional (objetivo do sistema, principais features, etc) :bulb:
-**Objetivo do Sistema:**   Plataforma web que permite a criação e busca fácil de grupos de estudos, além da administração de tais grupos.
 
-**Principais Features:**
+### Objetivo do Sistema
+
+ Plataforma web que permite a criação e busca fácil de grupos de estudos, além da administração de tais grupos.
+
+### Principais Features
+
 - Criação de grupos de estudo.
 
 - Criação de perfil de aluno customizável.
@@ -19,9 +25,11 @@ João Pedrosa (backend dev)
 - Sistema de criação de cronograma para o grupo.
 
 - Página do grupo para "posts" dos membros. 
-## :wrench: Tecnológico (LP, BD,etc) :wrench:
-Vue.js (frontend)
 
-Python + fastapi (backend)
+## :wrench: Tecnologias :wrench:
 
-SQL (banco de dados)
+  * Vue.js (Front-end)
+
+  * Python + FastAPI (Back-end)
+
+  * MongoDB (Banco de Dados)
