@@ -20,8 +20,8 @@ João Pedrosa (backend dev)
 
 - Página do grupo para "posts" dos membros. 
 ## Tecnológico (LP, BD,etc)
-Vue.js (front-end)
+Vue.js (frontend)
 
-Python + fastapi (back-end)
+Python + fastapi (backend)
 
 SQL (banco de dados)
