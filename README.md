@@ -10,13 +10,13 @@ João Pedrosa (backend dev)
 **Objetivo do Sistema:** Plataforma web que permite a criação e busca fácil de grupos de estudos, além da administração de tais grupos.
 
 **Principais Features**
-- Possibilidade de criar grupos de estudo.
+- Criação de grupos de estudo.
 
-- Possibilidade de criar um perfil de aluno customizável.
+- Criação de perfil de aluno customizável.
 
-- Possibilidade de pesquisar por grupos com filtros customizáveis.
+- Ferramenta de pesquisa por grupos com filtros customizáveis.
 
-- Sistema de criação de Cronograma para o grupo.
+- Sistema de criação de cronograma para o grupo.
 
 - Página do grupo para "posts" dos membros. 
 ## Tecnológico (LP, BD,etc)
