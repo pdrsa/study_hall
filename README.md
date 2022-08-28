@@ -4,9 +4,9 @@
 
   * Heitor de Paula Santos Damasceno (Front-end Developer)
 
-  * Antonio Isaac Lima (Full-stack Developer)
+  * Antonio Isaac Silva Lima (Full-stack Developer)
 
-  * João Pedrosa (Back-end Developer)
+  * João Antônio Oliveira Pedrosa (Back-end Developer)
 
 ## :bulb: Funcional (objetivo do sistema, principais features, etc) :bulb:
 
