@@ -4,7 +4,7 @@
 
   * Heitor de Paula Santos Damasceno (Front-end Developer)
 
-  * Antonio Isaac Silva Lima (Full-stack Developer)
+  * Antônio Isaac Silva Lima (Full-stack Developer)
 
   * João Antônio Oliveira Pedrosa (Back-end Developer)
 
