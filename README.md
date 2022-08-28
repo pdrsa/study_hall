@@ -9,7 +9,7 @@ João Pedrosa (backend dev)
 ## :bulb: Funcional (objetivo do sistema, principais features, etc) :bulb:
 **Objetivo do Sistema:**   Plataforma web que permite a criação e busca fácil de grupos de estudos, além da administração de tais grupos.
 
-**Principais Features**
+**Principais Features:**
 - Criação de grupos de estudo.
 
 - Criação de perfil de aluno customizável.
