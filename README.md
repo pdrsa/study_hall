@@ -7,7 +7,7 @@ Antonio Isaac Lima (fullstack dev)
 
 João Pedrosa (backend dev)
 ## Funcional (objetivo do sistema, principais features, etc)
-**Objetivo do Sistema:** Plataforma web que permite a criação e busca fácil de grupos de estudos, além da administração de tais grupos.
+**Objetivo do Sistema:**   Plataforma web que permite a criação e busca fácil de grupos de estudos, além da administração de tais grupos.
 
 **Principais Features**
 - Criação de grupos de estudo.
