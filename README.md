@@ -1,4 +1,4 @@
-# Study Buddy: Plataforma para Criação de Grupos de Estudo
+# Study Hall: Plataforma para Criação de Grupos de Estudo
 
 ## Membros e papéis (fullstack, backend ou frontend dev)
 Heitor de Paula Santos Damasceno (frontend dev)
