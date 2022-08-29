@@ -7,6 +7,9 @@
   * Antônio Isaac Silva Lima (Full-stack Developer)
 
   * João Antônio Oliveira Pedrosa (Back-end Developer)
+  
+  * Evaldo Martins de Souza (Back-end Developer)
+
 
 ## :bulb: Funcional (objetivo do sistema, principais features, etc) :bulb:
 
