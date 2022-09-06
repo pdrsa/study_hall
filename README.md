@@ -38,3 +38,11 @@
   * MongoDB (Banco de Dados)
 
 ## :book: Backlog do Produto :book:
+
+- História: Como aluno, eu quero criar, customizar e administrar um grupo de estudo.
+- História: Como aluno, eu quero ter um perfil pessoal com informações.
+- História: Como aluno, eu quero poder pesquisar grupos de acordo com meus interesses.
+- História: Como membro de um grupo, eu gostaria de criar postagens na página do grupo de estudos.
+- História: Como administrador de um grupo, eu quero criar um cronograma para meu grupo de estudos.
+- História: Como aluno, eu quero receber sugestões de grupos de acordo com minhas preferências.
+- História: Como usuário, eu quero possuir uma página inicial com os grupos que faço parte.
