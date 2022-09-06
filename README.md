@@ -40,9 +40,34 @@
 ## :book: Backlog do Produto :book:
 
 - História: Como aluno, eu quero criar, customizar e administrar um grupo de estudo.
+- Tarefas:
+       - Criar tela para criação e edição de grupo.
+       - Criar tela inicial dos grupos.
+       - Criar rota para criação de grupos.
+       - Criar rota para atualização de grupos.
+       - Criar rota para remoção de grupos.
+       - Criar tabela de grupos.
 - História: Como aluno, eu quero ter um perfil pessoal com informações.
+- Tarefas:
+       - Criar tela para login.
+       - Criar tela de perfil.
+       - Criar ferramentas de edição de perfil.
+       - Criar rota para criar perfil.
+       - Criar rota para atualizar perfil.
 - História: Como aluno, eu quero poder pesquisar grupos de acordo com meus interesses.
+- Tarefas:
+       - Criar rota para pesquisa de grupos.
 - História: Como membro de um grupo, eu gostaria de criar postagens na página do grupo de estudos.
+- Tarefas:
+       - Criar rota para a criação de posts.
+       - Criar rota para a remoção de posts.
+       - Criar tabela de posts por grupo.
 - História: Como administrador de um grupo, eu quero criar um cronograma para meu grupo de estudos.
+- Tarefas:
+       - Criar rota para a remoção de eventos.
 - História: Como aluno, eu quero receber sugestões de grupos de acordo com minhas preferências.
+- Tarefas:
+       - 
 - História: Como usuário, eu quero possuir uma página inicial com os grupos que faço parte.
+- Tarefas:
+       - 
