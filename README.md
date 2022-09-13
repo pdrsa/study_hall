@@ -63,7 +63,7 @@
 
 - História: Como aluno, eu quero criar, customizar e administrar um grupo de estudo.
 - Tarefas:
-- 
+ 
        - Criar rota para criação de grupos.
        
        - Criar tela para criação de grupos.
@@ -77,7 +77,7 @@
        - Criar tabela de grupos.
        
        - Criar tabela de ligação usuário-grupo
-       - 
+
 - História: Como aluno, eu quero ter um perfil pessoal com informações.
 - Tarefas:
 
