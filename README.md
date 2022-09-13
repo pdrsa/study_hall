@@ -39,6 +39,28 @@
 
 ## :book: Backlog do Produto :book:
 
+- Como aluno, eu quero criar, customizar e administrar um grupo de estudo.
+
+- Como aluno, eu quero receber sugestões de grupos de acordo com minhas preferências.
+
+- Como aluno, eu quero ter um perfil pessoal com informações.
+
+- Como aluno, eu quero poder pesquisar grupos de acordo com meus interesses.
+
+- Como membro de um grupo, eu gostaria de criar postagens na página do grupo de estudos.
+
+- Como administrador de um grupo, eu quero criar um cronograma para meu grupo de estudos.
+
+- Como usuário, eu quero possuir uma página inicial com os grupos que faço parte.
+
+- Como administrador de um grupo, eu quero poder decidir se um grupo é público ou privado.
+
+- Como administrador de um grupo, eu quero poder decidir os privilégios de cada membro.
+
+- Como usuário, eu quero receber notificações de posts dos grupos que eu estou afiliado.
+
+## :book: Backlog da Sprint :book:
+
 - História: Como aluno, eu quero criar, customizar e administrar um grupo de estudo.
 - Tarefas:
 - 
@@ -98,9 +120,8 @@
        
        - Criar rota para a remoção de eventos.
        
-- História: Como aluno, eu quero receber sugestões de grupos de acordo com minhas preferências.
-- Tarefas:
-       - 
+
+
 - História: Como usuário, eu quero possuir uma página inicial com os grupos que faço parte.
 - Tarefas:
 
