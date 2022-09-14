@@ -60,6 +60,13 @@
 - Como usuário, eu quero receber notificações de posts dos grupos que eu estou afiliado.
 
 ## :book: Backlog da Sprint :book:
+- Tarefas técnicas:
+
+       - Preparar ambiente de desenvolvimento frontend (Heitor e Isaac)
+        
+       - Preparar ambiente de desenvolvimento backend (João e Evaldo)
+       
+       - Configurar o SGBD (Evaldo) 
 
 - História: Como aluno, eu quero criar, customizar e administrar um grupo de estudo.
 - Tarefas:
