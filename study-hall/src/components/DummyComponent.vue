@@ -1,0 +1,12 @@
+<template>
+  <v-container>
+    <v-card
+      color="#FFFFFF"
+      elevation=2
+    >
+    <div>
+      oi
+    </div>
+    </v-card>
+  </v-container>
+</template>
