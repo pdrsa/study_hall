@@ -7,9 +7,20 @@
       max-width="1000px"
       class="bigrect"
     >
-      <v-row justify no-gutters>
+      <v-row>
         <v-col cols="4" class="hometext">
-          teste
+          <v-row>
+            <v-img
+              class="logo"
+              src="https://cdn.discordapp.com/attachments/691762837457993788/1033767650054123551/study-icon-78591_1.png"
+              max-height="110px"
+              max-width="110px"
+            >
+            </v-img>
+          </v-row>
+          <v-row>
+          <v-divider intern class="divider"></v-divider>
+          </v-row>
         </v-col>
         <v-col cols="1">
           <v-divider vertical></v-divider>
@@ -26,12 +37,27 @@
 
 <style>
 .hometext {
-  border-right: 15px solid transparent;
+  border-right: 60px solid transparent;
   border-left: 15px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .bigrect {
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 70px;
+}
+
+.logo {
+  margin-top: 10px;
+  margin-left: 105px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  margin-left: 50px;
 }
 </style>
