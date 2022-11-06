@@ -3,7 +3,7 @@
     <v-card
       color="#FFFFFF"
       elevation=2
-      height="950px"
+      height="1100px"
       width="1188px"
       rounded="xl"
       class="bigrect"
@@ -46,7 +46,7 @@
           cols="12"
           lg="6"
           class="pa-8" >
-          <v-text-field filled label="Password"></v-text-field>
+          <v-text-field filled label="Password" type="password"></v-text-field>
         </v-col>
         <v-spacer></v-spacer>
         <v-col
@@ -66,7 +66,6 @@
                   v-model="computedDateFormatted"
                   filled
                   label="Birthday"
-                  prepend-icon="mdi-calendar"
                   readonly
                   v-bind="attrs"
                   v-on="on"
@@ -98,14 +97,12 @@
           lg="6"
           class="pa-8">
             <div>
-            <v-file-input
-              :rules="rules"
-              accept="image/png, image/jpeg, image/bmp"
-              placeholder="Pick an avatar"
-              prepend-icon="mdi-camera"
-              label="Avatar"
-            ></v-file-input>
-           </div>
+              <input type="file" @change="onFileChange" />
+
+              <div id="preview">
+                <v-img v-if="url" :src="url"  max-height="500" max-width="500"/>
+              </div>  
+            </div>
        </v-col>
        <v-spacer></v-spacer>
        <v-col
@@ -114,7 +111,8 @@
           class="pa-8" >
           <v-textarea
            filled
-           label="About me"></v-textarea>
+           label="About me"
+           height="325px"></v-textarea>
          </v-col>
        </v-row>
 
@@ -142,10 +140,12 @@
 <script>
   export default {
     data: vm => ({
+      items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
       date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
       dateFormatted: vm.formatDate((new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)),
       menu1: false,
       menu2: false,
+      url: "https://picsum.photos/id/11/500/300"
     }),
 
     computed: {
@@ -161,6 +161,11 @@
     },
 
     methods: {
+      onFileChange(e) {
+        const file = e.target.files[0]
+        this.url = URL.createObjectURL(file)
+        URL.revokeObjectURL(file)
+      },
       formatDate (date) {
         if (!date) return null
 

@@ -3,7 +3,7 @@
     <v-card
       color="#FFFFFF"
       elevation=2
-      height="800px"
+      height="950px"
       width="1188px"
       rounded="xl"
       class="bigrect"
@@ -65,14 +65,12 @@
           lg="6"
           class="pa-8">
             <div>
-            <v-file-input
-              :rules="rules"
-              accept="image/png, image/jpeg, image/bmp"
-              placeholder="Pick an avatar"
-              prepend-icon="mdi-camera"
-              label="Avatar"
-            ></v-file-input>
-           </div>
+              <input type="file" @change="onFileChange" />
+
+              <div id="preview">
+                <v-img v-if="url" :src="url"  max-height="500" max-width="500"/>
+              </div>  
+            </div>
        </v-col>
        <v-spacer></v-spacer>
        <v-col
@@ -81,7 +79,8 @@
           class="pa-8" >
           <v-textarea
            filled
-           label="About Group"></v-textarea>
+           label="About Group"
+           height="325px"></v-textarea>
          </v-col>
        </v-row>
 
@@ -102,7 +101,15 @@
   export default {
     data: () => ({
       items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+      url: "https://picsum.photos/id/11/500/300"
     }),
+    methods: {
+      onFileChange(e) {
+        const file = e.target.files[0]
+        this.url = URL.createObjectURL(file)
+        URL.revokeObjectURL(file)
+      },
+    }
   }
 </script>
 
