@@ -6,6 +6,7 @@
       height="950px"
       width="1188px"
       rounded="xl"
+      class="bigrect"
     >
       <div>
         <v-row>
@@ -190,8 +191,9 @@
 }
 
 .bigrect {
-  border-top: 120px solid transparent;
-  border-bottom: 120px solid transparent;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: -5px;
 }
 
 .uploading-image{

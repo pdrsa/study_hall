@@ -6,6 +6,7 @@
       height="1200px"
       width="2000px"
       rounded="xl"
+      class="bigrect"
     >
     <v-row>
         <v-col cols="auto" class="hometext">
