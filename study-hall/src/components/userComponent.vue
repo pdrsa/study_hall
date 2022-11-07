@@ -4,7 +4,7 @@
       color="#FFFFFF"
       elevation=2
       height="1200px"
-      width="2000px"
+      width="2100px"
       rounded="xl"
       class="bigrect"
     >
@@ -18,15 +18,39 @@
                 src="https://picsum.photos/id/11/500/300"
                 ></v-img>
               </v-row>
-              <v-row class="bigrect" >
-                <h2>Interests</h2>
+
+              <v-row class="subheadertext">
+                <h1>Interests</h1>
               </v-row>
+
               <v-row>
-                <h2>Groups Favorited</h2>
+              <v-item-group multiple>
+                <v-item
+                  v-for="n in 3"
+                  :key="n"
+                  v-slot="{ active, toggle }"
+                >
+                  <v-chip
+                    active-class="purple--text"
+                    :input-value="active"
+                    @click="toggle"
+                  >
+                    Tag {{ n }}
+                  </v-chip>
+                </v-item>
+              </v-item-group>
+              </v-row>
+
+              <v-row class="subheadertext">
+                <h1>Groups Favorited</h1>
               </v-row>
           </v-col>
 
-          <v-col cols="auto" class="hometext">
+          <v-col cols="1">
+            <v-divider vertical></v-divider>
+          </v-col>
+
+          <v-col cols="auto" class="middletext">
               <v-container>
               <v-row>
                       <h1>Full Name</h1>
@@ -56,10 +80,21 @@
 
 <style>
 .hometext {
-  border-right: 70px solid transparent;
-  border-left: 70px solid transparent;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
+}
+
+.middletext {
+  border-right: 70px solid transparent;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.subheadertext {
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
 }
 
 .buttonregister {
