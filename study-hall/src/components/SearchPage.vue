@@ -71,7 +71,11 @@
                     </v-card>
             </v-row>
             <v-row>
-                <button @click="loadnext()">next</button>
+              <v-divider intern class="divider"></v-divider>
+            </v-row>
+
+            <v-row>
+                <v-btn @click="loadnext()" class="nextbutton">next</v-btn>
             </v-row>
         </div>
       </v-card>
@@ -130,19 +134,21 @@
             for (let i = this.start; i < this.end; i++){
                 this.toRender.push(this.items[i])
             }
-            this.start = this.start + this.toRender.length;
-            this.end =  this.start + this.toRender.length;
+            this.start = this.start + this.toRender.length
+            this.end = this.items.length
         },
 
         methods: {
             loadnext() {
-                this.toRender = [];
-                for (let i = this.start; i < this.end; i++){
-                    this.toRender.push(this.items[i])
-                }
+              this.toRender = [];
+              for (let i = this.start; i < (this.start + 5); i++){
+                  if (i >= this.end) {
+                    break;
+                  }
+                  this.toRender.push(this.items[i])
+              }
             }
         } 
-
     }
   </script>
 
@@ -151,14 +157,12 @@
     border-right: 70px solid transparent;
     border-left: 70px solid transparent;
     border-top: 50px solid transparent;
-    border-bottom: 15px solid transparent;
   }
 
   .searchfilter {
     border-right: 0px solid transparent;
     border-left: 30px solid transparent;
     border-top: 50px solid transparent;
-    border-bottom: 15px solid transparent;
   }
 
   .groupcards {
@@ -183,6 +187,7 @@
      }
 
   .divider {
+      margin-top: 15px;
       margin-left: 50px;
       margin-right: 50px;
   }
@@ -194,9 +199,17 @@
   }
 
   .cardcontent {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    margin-bottom: 50px;
+  }
+
+  .nextbutton {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
   }
   </style>
   
