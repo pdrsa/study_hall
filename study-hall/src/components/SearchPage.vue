@@ -3,7 +3,7 @@
       <v-card
         color="#FFFFFF"
         elevation=2
-        height="1300px"
+        height="1400px"
         width="1188px"
         rounded="xl"
         class="bigrect"
@@ -41,7 +41,7 @@
             </v-row>
 
             <v-row
-                v-for="(item) in toRender"
+                v-for="(item) in toRender" :key="item.title"
                 class="groupcards"
             >
                     <v-card
@@ -50,14 +50,24 @@
                         height="200px"
                         width="1000px"
                     >
-                        <div class="d-flex flex-no-wrap justify-space-between">
-                        <div>
-                            <v-card-title
-                            class="text-h5"
-                            v-text="item.title"
-                            ></v-card-title>
-                        </div>
-                        </div>
+                      <v-row>
+                        <v-column>
+                          <v-img :src="item.src"
+                          height="150px"
+                          width="150px"
+                          class="cardimage"
+                          ></v-img>
+                        </v-column>
+                        <v-row>
+                          <v-column>
+                            <h2 class="cardcontent">{{ item.title }}</h2>
+                          </v-column>
+
+                          <v-column>
+                            <h2 class="cardcontent">Membros:</h2>
+                          </v-column>
+                        </v-row>
+                      </v-row>
                     </v-card>
             </v-row>
             <v-row>
@@ -172,9 +182,21 @@
        display:flex;
      }
 
-    .divider {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
+  .divider {
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+
+  .cardimage {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .cardcontent {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
   </style>
   

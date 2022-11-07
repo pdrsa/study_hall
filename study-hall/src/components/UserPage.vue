@@ -44,6 +44,12 @@
               <v-row class="subheadertext">
                 <h1>Groups Favorited</h1>
               </v-row>
+
+              <v-row
+                v-for="(item) in groups" :key="item"
+              >
+                <h2>{{ item }}</h2>
+              </v-row>
           </v-col>
 
           <v-col cols="1">
@@ -77,6 +83,14 @@
     </v-card>
   </v-container>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+      groups: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+    }),
+  }
+</script>
 
 <style>
 .hometext {

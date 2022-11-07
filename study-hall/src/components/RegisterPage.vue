@@ -24,7 +24,7 @@
         cols="12"
         lg="6"
         class="pa-8" >
-          <v-text-field filled label="Username"></v-text-field>
+          <v-text-field filled label="Username" v-model="username"></v-text-field>
         </v-col>
         <v-spacer></v-spacer>
         <v-col
@@ -46,7 +46,7 @@
           cols="12"
           lg="6"
           class="pa-8" >
-          <v-text-field filled label="Password" type="password"></v-text-field>
+          <v-text-field filled label="Password" type="password" v-model="password"></v-text-field>
         </v-col>
         <v-spacer></v-spacer>
         <v-col
@@ -85,7 +85,7 @@
         no-gutters >
         <v-col
           class="pa-8" >
-          <v-text-field filled label="Full Name"></v-text-field>
+          <v-text-field filled label="Full Name" v-model="fullName"></v-text-field>
         </v-col>
       </v-row>
 
@@ -121,6 +121,7 @@
            height=84
            width=266
            color="primary"
+           @click="postForm"
          >
          Register
          </v-btn>
@@ -138,6 +139,8 @@
 </script>
 
 <script>
+  import axios from 'axios';
+  
   export default {
     data: vm => ({
       items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
@@ -145,7 +148,11 @@
       dateFormatted: vm.formatDate((new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)),
       menu1: false,
       menu2: false,
-      url: "https://picsum.photos/id/11/500/300"
+      url: "https://picsum.photos/id/11/500/300",
+      username: "",
+      password: "",
+      fullName: "",
+      aboutMeContent: ""
     }),
 
     computed: {
@@ -178,6 +185,22 @@
         const [month, day, year] = date.split('/')
         return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
       },
+      postForm() {
+        return axios.post("/add", {
+            username: this.username,
+            password: this.password,
+            birthday: this.dateFormatted,
+            fullName: this.fullName,
+            image: this.url,
+            aboutMe: this.aboutMeContent
+        }, {
+            headers: {
+                'Content-type': 'application/json',
+            }
+        }).then((response) => {
+            console.log("content: " + this.username + " " + this.password + " " + this.fullName);
+        });
+      }
     },
   }
 </script>

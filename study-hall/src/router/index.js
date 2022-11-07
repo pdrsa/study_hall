@@ -7,22 +7,22 @@ const routes = [
   {
     path: '/register',
     name: 'register',
-    component: () => import('../components/registerComponent.vue'),
+    component: () => import('../components/RegisterPage.vue'),
   },
   {
     path: '/registerGroup',
     name: 'registerGroup',
-    component: () => import('../components/registerGroupComponent.vue'),
+    component: () => import('../components/RegisterGroupPage.vue'),
   },
   {
     path: '/user',
     name: 'user',
-    component: () => import('../components/userComponent.vue'),
+    component: () => import('../components/UserPage.vue'),
   },
   {
     path: '/search',
     name: 'search',
-    component: () => import('../components/searchComponent.vue'),
+    component: () => import('../components/SearchPage.vue'),
   },
   {
     path: '/login',
