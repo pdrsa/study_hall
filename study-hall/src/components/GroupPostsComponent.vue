@@ -106,7 +106,7 @@
                 <v-btn
                   class="ma-1"
                   color="blue"
-                  @click="post()"
+                  @click="post();dialog.value=false"
                 >
                   <h3> Postar </h3>
                 </v-btn>
@@ -161,6 +161,7 @@ export default {
   methods: {
     post () {
       this.posts.unshift({username:"teste", content:this.postcontent, date: "24/12/2007 15:23"})
+      this.postcontent=""
     }
   }
 }

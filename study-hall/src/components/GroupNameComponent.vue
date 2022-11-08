@@ -10,9 +10,9 @@
     >
 
       <v-row>
-        <v-spacer></v-spacer>
-        <h1 class="pa-8"> {{ group.group_name }} </h1>
-        <v-spacer></v-spacer>
+        <v-spacer/>
+        <h1 class="ma-10"> {{ group.group_name }} </h1>
+        <v-spacer/>
       </v-row>
 
       <v-row>
@@ -26,8 +26,20 @@
         <v-col>
           <p>Organizador: {{ group.organizer_name }}</p>
           <p>Contato: {{ group.organizer_contact }}</p>
-          <p class="vertical_spacer"></p>
-          <p>Interesse do Grupo:</p>
+          <v-btn
+            class="group-name-buttons"
+            color="blue"
+            text
+            outlined
+            flatten
+            @click="entrar"
+          >
+            <h3>Entrar no Grupo</h3>
+          </v-btn>
+
+          <GroupEvents/>
+
+          <p class="mt-4">Interesse do Grupo</p>
           <v-item
             v-slot="{ active, toggle }"
           >
@@ -47,7 +59,11 @@
   </v-container>
 </template>
 <script>
+import GroupEvents from "@/components/GroupEventsComponent";
 export default {
+  components: {
+    GroupEvents
+  },
   data: () => ({
       photo_src: "https://geodash.gov.bd/uploaded/people_group/default_group.png",
       group: {
@@ -57,6 +73,11 @@ export default {
         interest: "Geografia",
       }
   }),
+  methods: {
+    entrar () {
+      alert("Entrou no grupo")
+    }
+  }
 }
 </script>
 <style>
@@ -67,10 +88,16 @@ export default {
 }
 
 .group_avatar {
-  margin-left: 120px;
+  margin-left: 128px;
 }
 
 .vertical_spacer {
   margin-top: 115px;
 }
+
+.group-name-buttons {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 </style>
