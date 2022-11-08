@@ -9,7 +9,7 @@ class Usuario(Base):
     user_id = Column(Integer, primary_key = True, index = True)
     username = Column(String(50))
     fullname = Column(String(50))
-    interests = Column(String(50))
+    interests = Column(String(200))
     birthday = Column(String(50))
     password = Column(String(50))
     about = Column(String(200))
