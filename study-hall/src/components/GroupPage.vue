@@ -13,19 +13,11 @@
 </template>
 <script>
 export default {
-
   components:{
     GroupName: () => import('@/components/GroupNameComponent.vue'),
     GroupMembers: () => import('@/components/GroupMembersComponent.vue'),
     GroupPosts: () => import('@/components/GroupPostsComponent.vue')
-  },
-
-  data: () => ({
-    //
-  }),
-
-  mounted() {
-  },
+  }
 };
 </script>
 <style>
