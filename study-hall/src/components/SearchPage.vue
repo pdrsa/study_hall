@@ -20,20 +20,12 @@
                     <v-select
                     :items="filtros"
                     filled
+                    rounded
                     label="Filtro 1"
                     style="width:200px"
                     ></v-select>
                 </v-col>
 
-                <v-col
-                class="searchfilter">
-                    <v-select
-                    :items="filtros"
-                    filled
-                    label="Filtro 2"
-                    style="width:200px"
-                    ></v-select>
-                </v-col>
             </v-row>
 
             <v-row>

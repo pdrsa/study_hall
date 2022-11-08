@@ -81,6 +81,21 @@
             <v-row>
               <v-divider intern class="divider"></v-divider>
             </v-row>
+            <v-row>
+              <v-btn
+                depressed
+                elevation="0"
+                large
+                plain
+                width="192px"
+                class="align-button"
+              >
+                <b>Meu Grupo</b>
+              </v-btn>
+            </v-row>
+            <v-row>
+              <v-divider intern class="divider"></v-divider>
+            </v-row>
           </v-container>
         </v-col>
         <v-col cols="1">

@@ -10,6 +10,11 @@ const routes = [
     component: () => import('../components/RegisterPage.vue'),
   },
   {
+    path: '/group',
+    name: 'group',
+    component: () => import('../components/GroupPage.vue'),
+  },
+  {
     path: '/registerGroup',
     name: 'registerGroup',
     component: () => import('../components/RegisterGroupPage.vue'),
