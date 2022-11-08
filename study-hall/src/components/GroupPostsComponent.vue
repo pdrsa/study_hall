@@ -5,7 +5,7 @@
       color="#FFFFFF"
       elevation="10"
       max-width="800px"
-      height="550px"
+      height="600px"
       class="bigrect"
     >
 
@@ -14,40 +14,52 @@
         <v-spacer></v-spacer>
       </v-row>
 
-      <v-sheet
-        class="ma-5"
-        outlined
-        rounded
-      >
-        <v-responsive
-          class="overflow-y-auto"
-          max-height="380px"
+      <v-row>
+        <v-sheet
+          class="ma-5"
+          outlined
+          rounded
         >
-          <v-row
-            v-for="(post) in posts" :key="posts.findIndex(x=>x==post)"
+          <v-responsive
+            class="overflow-y-auto"
+            max-height="380px"
           >
-            <v-card class="pa-6">
-              <v-row>
-                <v-col cols="2">
-                  <v-img :src="user_avatar"
-                  height="90px"
-                  width="90px"
-                  class="ma-4"
-                  ></v-img>
-                </v-col>
-                <v-col>
-                  <v-row>
-                    <p class="date-post"> {{ post.date }} </p>
-                  </v-row>
-                  <v-row>
-                    <p class="content-post"> {{ post.content }} </p>
-                  </v-row>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-row>
-        </v-responsive>
-      </v-sheet>
+            <v-row
+              v-for="(post) in posts" :key="posts.findIndex(x=>x==post)"
+            >
+              <v-card class="pa-6">
+                <v-row>
+                  <v-col cols="2">
+                    <v-img :src="user_avatar"
+                    height="90px"
+                    width="90px"
+                    class="ma-4"
+                    ></v-img>
+                  </v-col>
+                  <v-col>
+                    <v-row>
+                      <p class="date-post"> {{ post.date }} </p>
+                    </v-row>
+                    <v-row>
+                      <p class="content-post"> {{ post.content }} </p>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </v-card>
+            </v-row>
+          </v-responsive>
+        </v-sheet>
+      </v-row>
+
+      <v-row>
+        <v-spacer></v-spacer>
+        <v-btn class="ma-3"
+          color="blue"
+        >
+          <h3> Criar Post </h3>
+        </v-btn>
+        <v-spacer></v-spacer>
+      </v-row>
 
     </v-card>
   </v-container>

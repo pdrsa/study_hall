@@ -115,7 +115,7 @@
                 'Content-type': 'application/json',
             }
         }).then((response) => {
-          console.log("content: " + data);
+          console.log("content: " + response);
         });
       }
     }

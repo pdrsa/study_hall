@@ -38,10 +38,16 @@ const routes = [
     path: '/',
     name: 'home',
     component: () => import('../components/HomePage.vue'),
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import('../components/HomePage.vue'),
   }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

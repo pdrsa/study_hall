@@ -116,7 +116,16 @@
     </v-card>
   </v-container>
 </template>
+<script>
+export default {
+  methods: {
+    open_profile (user_id) {
+      alert("User ID desse usuário é " + user_id)
 
+    }
+  } 
+}
+</script>
 <style>
 .hometext {
   border-right: 60px solid transparent;
