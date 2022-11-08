@@ -6,7 +6,7 @@
       elevation="10"
       max-width="800px"
       height="450px"
-      class="bigrect"
+      class="bigrect-login"
     >
 
       <v-row>
@@ -20,6 +20,7 @@
         <v-text-field
         v-model="username"
         label="Username"
+        ref="username"
         filled
         clearable
         dense
@@ -33,9 +34,11 @@
         <v-text-field
         v-model="password"
         label="Password"
+        ref="password"
         filled
         clearable
         rounded
+        type="password"
         >
         </v-text-field>
       <v-spacer></v-spacer>
@@ -48,7 +51,8 @@
           large
           width="192px"
           color="blue"
-          class="align-button"
+          class="align-button-login"
+          @click="login"
         >
           <b>Login</b>
         </v-btn>
@@ -59,7 +63,8 @@
           large
           color="blue"
           width="192px"
-          class="align-button"
+          class="align-button-login"
+          @click="go_to_path('/register')"
         >
           <b>Register</b>
         </v-btn>
@@ -69,15 +74,28 @@
     </v-card>
   </v-container>
 </template>
-
+<script>
+export default {
+  methods: {
+    go_to_path (path) {
+      if (this.$route.path !== path) {
+        this.$router.push(path);
+      }
+    },
+    login(){
+      alert(this.username + ":" + this.password)
+    }
+  },
+}
+</script>
 <style>
-.bigrect {
+.bigrect-login {
   margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 170px;
 }
 
-.align-button {
+.align-button-login {
   margin-top: 80px;
 }
 

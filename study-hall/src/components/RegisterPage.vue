@@ -6,7 +6,7 @@
       height="975px"
       width="1188px"
       rounded="xl"
-      class="bigrect"
+      class="bigrect-register"
     >
       <div>
         <v-row>
@@ -189,19 +189,19 @@
 </script>
 
 <style>
-.hometext {
+.hometext-register {
   border-right: 70px solid transparent;
   border-left: 70px solid transparent;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
 }
 
-.buttonregister {
+.buttonregister-register {
   background-color: #0D1A8F;
   color: white;
 }
 
-.bigrect {
+.bigrect-register {
   margin-top: 30px;
   margin-bottom: 20px;
   margin-left: -5px;

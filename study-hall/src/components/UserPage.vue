@@ -6,7 +6,7 @@
       height="900px"
       width="2100px"
       rounded="xl"
-      class="bigrect"
+      class="bigrect-user"
     >
     <v-row>
         <v-col cols="4.5" class="usertext">
@@ -56,7 +56,7 @@
               <v-row>
                       <h2>Age</h2>
               </v-row>
-              <v-row class="bigrect">
+              <v-row class="bigrect-user">
                 <v-card
                   class="d-flex justify-center mb-6"
                   color="#D9D9D9"
@@ -108,7 +108,7 @@
   color: white;
 }
 
-.bigrect {
+    .bigrect-user {
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
 }

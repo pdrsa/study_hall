@@ -6,7 +6,7 @@
       elevation="10"
       max-width="800px"
       height="450px"
-      class="bigrect"
+      class="bigrect-group-name"
     >
 
       <v-row>
@@ -60,7 +60,7 @@ export default {
 }
 </script>
 <style>
-.bigrect {
+.bigrect-group-name {
   margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 170px;

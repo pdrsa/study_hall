@@ -6,7 +6,7 @@
       elevation="10"
       max-width="800px"
       height="600px"
-      class="bigrect"
+      class="bigrect-group-posts"
     >
 
       <v-row>
@@ -27,7 +27,11 @@
             <v-row
               v-for="(post) in posts" :key="posts.findIndex(x=>x==post)"
             >
-              <v-card class="pa-6">
+              <v-card
+                class="pa-6"
+                height="auto"
+                width="800px"
+              >
                 <v-row>
                   <v-col cols="2">
                     <v-img :src="user_avatar"
@@ -53,11 +57,64 @@
 
       <v-row>
         <v-spacer></v-spacer>
-        <v-btn class="ma-3"
-          color="blue"
+        <v-dialog
+          transition="dialog-bottom-transition"
+          width="auto"
+          height="auto"
         >
-          <h3> Criar Post </h3>
-        </v-btn>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn 
+              class="ma-3"
+              color="blue"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <h3> Criar Post </h3>
+            </v-btn>
+          </template>
+          <template v-slot:default="dialog">
+            <v-card
+              width="570px"
+              height="400px"
+            >
+              <v-row>
+                <v-col>
+                  <h2 class="ma-5"> Criar Post </h2>
+                </v-col>
+                <v-col>
+                  <v-card-actions class="justify-end">
+                    <v-btn
+                      class="ma-3"
+                      color="blue"
+                      @click="dialog.value = false"
+                    >Fechar</v-btn>
+                  </v-card-actions>
+                </v-col>
+              </v-row>
+
+              <v-row>
+                <v-textarea
+                clearable
+                label="Escreva aqui"
+                v-model="postcontent"
+                height="120px"
+                class="ma-8"
+                ></v-textarea>
+              </v-row>
+              <v-row>
+                <v-spacer/>
+                <v-btn
+                  class="ma-1"
+                  color="blue"
+                  @click="post()"
+                >
+                  <h3> Postar </h3>
+                </v-btn>
+                <v-spacer/>
+              </v-row>
+            </v-card>
+          </template>
+        </v-dialog>
         <v-spacer></v-spacer>
       </v-row>
 
@@ -101,10 +158,15 @@ export default {
       }
     ]
   }),
+  methods: {
+    post () {
+      this.posts.unshift({username:"teste", content:this.postcontent, date: "24/12/2007 15:23"})
+    }
+  }
 }
 </script>
 <style>
-.bigrect {
+.bigrect-group-posts {
   margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 170px;

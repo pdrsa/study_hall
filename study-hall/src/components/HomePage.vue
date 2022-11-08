@@ -5,7 +5,7 @@
       color="#FFFFFF"
       elevation="10"
       max-width="1000px"
-      class="bigrect"
+      class="bigrect-home"
     >
       <v-row>
         <v-col cols="4" class="hometext">
@@ -19,7 +19,7 @@
               ></v-img>
             </v-row>
             <v-row>
-              <v-divider intern class="divider"></v-divider>
+              <v-divider intern class="divider-home"></v-divider>
             </v-row>
             <v-row>
               <v-btn
@@ -28,13 +28,14 @@
                 large
                 plain
                 width="192px"
-                class="align-button"
+                class="align-button-home"
+                @click="go_to_path('/login')"
               >
                 <b>Login</b>
               </v-btn>
             </v-row>
             <v-row>
-              <v-divider intern class="divider"></v-divider>
+              <v-divider intern class="divider-home"></v-divider>
             </v-row>
             <v-row>
               <v-btn
@@ -43,13 +44,14 @@
                 large
                 plain
                 width="192px"
-                class="align-button"
+                class="align-button-home"
+                @click="go_to_path('/user')"
               >
                 <b>Perfil</b>
               </v-btn>
             </v-row>
             <v-row>
-              <v-divider intern class="divider"></v-divider>
+              <v-divider intern class="divider-home"></v-divider>
             </v-row>
             <v-row>
               <v-btn
@@ -58,13 +60,14 @@
                 large
                 plain
                 width="192px"
-                class="align-button"
+                class="align-button-home"
+                @click="go_to_path('/registergroup')"
               >
                 <b>Criar Grupo</b>
               </v-btn>
             </v-row>
             <v-row>
-              <v-divider intern class="divider"></v-divider>
+              <v-divider intern class="divider-home"></v-divider>
             </v-row>
             <v-row>
               <v-btn
@@ -73,13 +76,14 @@
                 large
                 plain
                 width="192px"
-                class="align-button"
+                class="align-button-home"
+                @click="go_to_path('/search')"
               >
                 <b>Procurar Grupo</b>
               </v-btn>
             </v-row>
             <v-row>
-              <v-divider intern class="divider"></v-divider>
+              <v-divider intern class="divider-home"></v-divider>
             </v-row>
             <v-row>
               <v-btn
@@ -88,13 +92,13 @@
                 large
                 plain
                 width="192px"
-                class="align-button"
+                class="align-button-home"
               >
                 <b>Meu Grupo</b>
               </v-btn>
             </v-row>
             <v-row>
-              <v-divider intern class="divider"></v-divider>
+              <v-divider intern class="divider-home"></v-divider>
             </v-row>
           </v-container>
         </v-col>
@@ -119,11 +123,12 @@
 <script>
 export default {
   methods: {
-    open_profile (user_id) {
-      alert("User ID desse usuário é " + user_id)
-
+    go_to_path (path) {
+      if (this.$route.path !== path) {
+        this.$router.push(path);
+      }
     }
-  } 
+  },
 }
 </script>
 <style>
@@ -146,7 +151,7 @@ export default {
   font-size: 60px;
 }
 
-.bigrect {
+.bigrect-home {
   margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 70px;
@@ -154,15 +159,15 @@ export default {
 
 .logo {
   margin-top: 10px;
-  margin-left: 95px;
+  margin-left: 90px;
   margin-bottom: 20px;
 }
 
-.divider {
+.divider-home {
   margin-left: 50px;
 }
 
-.align-button {
+.align-button-home {
   margin-left: 50px;
 }
 </style>
