@@ -3,7 +3,7 @@
     <v-card
       color="#FFFFFF"
       elevation=2
-      height="950px"
+      height="800px"
       width="1188px"
       rounded="xl"
       class="bigrect"
@@ -24,7 +24,7 @@
         cols="12"
         lg="6"
         class="pa-8" >
-          <v-text-field filled label="Group Name"></v-text-field>
+          <v-text-field filled label="Group Name" v-model="group_name"></v-text-field>
         </v-col>
         <v-spacer></v-spacer>
         <v-col
@@ -35,6 +35,7 @@
             :items="items"
             filled
             label="Group's Subjects"
+            v-model="interest"
           ></v-select>
         </v-col>
       </v-row>
@@ -46,41 +47,26 @@
           cols="12"
           lg="6"
           class="pa-8" >
-          <v-text-field filled label="Organizer Name"></v-text-field>
+          <v-text-field filled label="Organizer Name" v-model="organizer_name"></v-text-field>
         </v-col>
         <v-spacer></v-spacer>
         <v-col
           cols="12"
           lg="6"
           class="pa-8" >
-            <v-text-field filled label="Organizer Contact"></v-text-field>
+            <v-text-field filled label="Organizer Contact" v-model="organizer_contact"></v-text-field>
         </v-col>
       </v-row>
 
       <v-row
         :align="align"
         no-gutters >
-        <v-col
-          cols="12"
-          lg="6"
-          class="pa-8">
-            <div>
-              <input type="file" @change="onFileChange" />
-
-              <div id="preview">
-                <v-img v-if="url" :src="url"  max-height="500" max-width="500"/>
-              </div>  
-            </div>
-       </v-col>
-       <v-spacer></v-spacer>
-       <v-col
-         cols="12"
-         lg="6"
-          class="pa-8" >
+       <v-col class="pa-8" >
           <v-textarea
            filled
            label="About Group"
-           height="325px"></v-textarea>
+           v-model="aboutMeContent"
+           height="200px"></v-textarea>
          </v-col>
        </v-row>
 
@@ -89,6 +75,7 @@
            height=84
            width=266
            color="primary"
+           @click="postForm"
          >
          Register
          </v-btn>
@@ -98,17 +85,39 @@
 </template>
 
 <script>
+  import axios from 'axios';
+
   export default {
     data: () => ({
       items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
-      url: "https://picsum.photos/id/11/500/300"
+      group_name: "",
+      organizer_id: 0,
+      organizer_name: "",
+      organizer_contact: "",
+      interest: "",
+      aboutMeContent: ""      
     }),
     methods: {
-      onFileChange(e) {
-        const file = e.target.files[0]
-        this.url = URL.createObjectURL(file)
-        URL.revokeObjectURL(file)
-      },
+      postForm() {
+        const data = JSON.stringify({
+          group_name: this.group_name,
+          organizer_id: this.organizer_id,
+          organizer_name: this.organizer_name,
+          organizer_contact: this.organizer_contact,
+          interest: this.interest,
+          about: this.aboutMeContent
+        })
+
+        return axios.post("/add", {
+            data: data
+        }, {
+            headers: {
+                'Content-type': 'application/json',
+            }
+        }).then((response) => {
+          console.log("content: " + data);
+        });
+      }
     }
   }
 </script>

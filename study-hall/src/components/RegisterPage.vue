@@ -3,7 +3,7 @@
     <v-card
       color="#FFFFFF"
       elevation=2
-      height="1100px"
+      height="975px"
       width="1188px"
       rounded="xl"
       class="bigrect"
@@ -92,27 +92,11 @@
       <v-row
         :align="align"
         no-gutters >
-        <v-col
-          cols="12"
-          lg="6"
-          class="pa-8">
-            <div>
-              <input type="file" @change="onFileChange" />
-
-              <div id="preview">
-                <v-img v-if="url" :src="url"  max-height="500" max-width="500"/>
-              </div>  
-            </div>
-       </v-col>
-       <v-spacer></v-spacer>
-       <v-col
-         cols="12"
-         lg="6"
-          class="pa-8" >
+       <v-col class="pa-8" >
           <v-textarea
            filled
            label="About me"
-           height="325px"></v-textarea>
+           height="200px"></v-textarea>
          </v-col>
        </v-row>
 
@@ -148,7 +132,7 @@
       dateFormatted: vm.formatDate((new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)),
       menu1: false,
       menu2: false,
-      url: "https://picsum.photos/id/11/500/300",
+      interests: [],
       username: "",
       password: "",
       fullName: "",
@@ -168,11 +152,6 @@
     },
 
     methods: {
-      onFileChange(e) {
-        const file = e.target.files[0]
-        this.url = URL.createObjectURL(file)
-        URL.revokeObjectURL(file)
-      },
       formatDate (date) {
         if (!date) return null
 
@@ -186,19 +165,23 @@
         return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
       },
       postForm() {
+        const data = JSON.stringify({
+          username: this.username,
+          interests: this.interests,
+          password: this.password,
+          birthday: this.dateFormatted,
+          fullname: this.fullName,
+          about: this.aboutMeContent
+        })
+
         return axios.post("/add", {
-            username: this.username,
-            password: this.password,
-            birthday: this.dateFormatted,
-            fullName: this.fullName,
-            image: this.url,
-            aboutMe: this.aboutMeContent
+            data: data
         }, {
             headers: {
                 'Content-type': 'application/json',
             }
         }).then((response) => {
-            console.log("content: " + this.username + " " + this.password + " " + this.fullName);
+            console.log("content: " + data);
         });
       }
     },

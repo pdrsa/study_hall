@@ -3,14 +3,14 @@
     <v-card
       color="#FFFFFF"
       elevation=2
-      height="1200px"
+      height="900px"
       width="2100px"
       rounded="xl"
       class="bigrect"
     >
     <v-row>
-        <v-col cols="auto" class="hometext">
-            <v-row class="bigrect" justify-md>
+        <v-col cols="4.5" class="usertext">
+            <v-row>
                 <v-img
                 lazy-src="https://picsum.photos/id/11/10/6"
                 max-height="324"
@@ -30,33 +30,25 @@
                   :key="n"
                   v-slot="{ active, toggle }"
                 >
-                  <v-chip
-                    active-class="purple--text"
-                    :input-value="active"
-                    @click="toggle"
-                  >
-                    Tag {{ n }}
-                  </v-chip>
+                  <v-row class="tag">
+                    <v-chip
+                      active-class="purple--text"
+                      :input-value="active"
+                      @click="toggle"
+                    >
+                      Tag {{ n }}
+                    </v-chip>
+                  </v-row>
                 </v-item>
               </v-item-group>
               </v-row>
-
-              <v-row class="subheadertext">
-                <h1>Groups Favorited</h1>
-              </v-row>
-
-              <v-row
-                v-for="(item) in groups" :key="item"
-              >
-                <h2>{{ item }}</h2>
-              </v-row>
           </v-col>
 
-          <v-col cols="1">
+          <v-col>
             <v-divider vertical></v-divider>
           </v-col>
 
-          <v-col cols="auto" class="middletext">
+          <v-col cols="6.5" class="middletext">
               <v-container>
               <v-row>
                       <h1>Full Name</h1>
@@ -69,7 +61,7 @@
                   class="d-flex justify-center mb-6"
                   color="#D9D9D9"
                   elevation=2
-                  height="900px"
+                  height="650px"
                   width="500px"
                   rounded="xl"
                 >
@@ -93,7 +85,7 @@
 </script>
 
 <style>
-.hometext {
+.usertext {
   border-right: 40px solid transparent;
   border-left: 40px solid transparent;
   border-top: 15px solid transparent;
@@ -118,10 +110,16 @@
 
 .bigrect {
   border-top: 30px solid transparent;
-  border-bottom: 120px solid transparent;
+  border-bottom: 30px solid transparent;
 }
 
 .uploading-image{
-     display:flex;
-   }
+    display:flex;
+  }
+  
+.tag {
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+}
+
 </style>
